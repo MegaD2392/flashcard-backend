@@ -63,6 +63,7 @@ app.post('/api/cards', async (req, res) => {
     }
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, async () => {
+    await connectToDb();
     console.log(`Server is running on http://localhost:${PORT}`);
 });
